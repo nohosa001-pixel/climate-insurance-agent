@@ -36,8 +36,8 @@ def kill_existing_port_process(port=8500):
 
 def open_browser():
     time.sleep(1.2)
-    url = "http://localhost:8500"
-    print(f"\n✨ Opening AgriPulse AI Mission Control Dashboard in your browser: {url}\n")
+    url = "http://localhost:8500/docs"
+    print(f"\n✨ Opening Trade Climate Oracle API Docs in your browser: {url}\n")
     webbrowser.open(url)
 
 if __name__ == "__main__":
@@ -48,10 +48,10 @@ if __name__ == "__main__":
     sys.path.insert(0, backend_dir)
 
     print("=" * 80)
-    print(" 🛰️ [AGRIPULSE AI] Climate Satellite, ML Yield & CBOT Quant Platform")
+    print(" 🌍 [TRADE ORACLE] Climate & EUDR Compliance Oracle Subsystem (v3.0)")
     print("=" * 80)
-    print(" Server URL: http://localhost:8500")
-    print(" Starting unified backend & frontend server...")
+    print(" Server URL: http://localhost:8500 (Swagger: /docs)")
+    print(" Starting Trade Climate Oracle API server...")
 
     # Start browser opener in background thread
     threading.Thread(target=open_browser, daemon=True).start()
